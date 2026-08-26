@@ -107,7 +107,6 @@ body {
 .sep { color: var(--gold); font-style: normal; padding: 0 2px; }
 
 
-/* ---------- type ---------- */
 
 .headline {
   margin: 24px 0 0;
@@ -181,8 +180,7 @@ body {
     0 10px 20px -12px rgba(169, 124, 0, .7);
 }
 
-/* Fired when someone console-submits an empty form. Native validation, our shake. */
-.input:user-invalid {
+
   box-shadow: inset 0 0 0 1.5px #E08A2E, 0 0 0 4px rgba(224, 138, 46, .12);
   animation: nudge .4s var(--glide);
 }
@@ -196,7 +194,7 @@ body {
   cursor: pointer;
 }
 
-.select:invalid { color: var(--ink-faint); }   /* the disabled placeholder option */
+.select:invalid { color: var(--ink-faint); }   
 
 .chevron {
   position: absolute;
@@ -211,11 +209,11 @@ body {
 }
 
 
-/* ---------- the button that doesn't want the job ---------- */
+
 
 .sneaky-btn {
   position: relative;
-  z-index: 3;                       /* it flies over the fields, not under them */
+  z-index: 3;                     
   justify-self: center;
   margin-top: 8px;
   padding: 16px 38px;
@@ -236,11 +234,11 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, .65),
     0 12px 26px -10px rgba(169, 124, 0, .9),
     0 2px 5px rgba(51, 51, 51, .09);
-  /* 240ms is the sweet spot: fast enough to be unwinnable, slow enough to enjoy. */
+  
   transition: transform .24s var(--snap), box-shadow .3s var(--glide);
 }
 
-.sneaky-btn::after {                /* slow sheen, so it looks alive while it waits */
+.sneaky-btn::after {               
   content: "";
   position: absolute;
   inset: 0;
@@ -296,7 +294,7 @@ body {
 .log-count { margin-left: auto; flex: none; font-variant-numeric: tabular-nums; }
 
 
-/* ---------- cleared ---------- */
+
 
 .cleared {
   position: relative;
@@ -311,7 +309,7 @@ body {
   animation: land .58s var(--snap) both;
 }
 
-.cleared::before {                  /* warm bloom, like a stamp still drying */
+.cleared::before {                 
   content: "";
   position: absolute;
   inset: -30% 10% auto;
@@ -412,7 +410,7 @@ body {
 .ghost-btn:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
 
 
-/* ---------- keyframes ---------- */
+
 
 @keyframes sheen { 0% { transform: translateX(-130%); } 55%, 100% { transform: translateX(130%); } }
 @keyframes nudge { 0%,100% { transform: translateX(0); } 22% { transform: translateX(-6px); } 55% { transform: translateX(5px); } 80% { transform: translateX(-2px); } }
@@ -421,7 +419,7 @@ body {
 @keyframes bloom { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
 
 
-/* ---------- small screens ---------- */
+
 
 @media (max-width: 479px) {
   .row { grid-template-columns: 1fr; }
@@ -437,5 +435,5 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
-  /* The button still teleports — it just stops being cute about it. */
+  
 }
