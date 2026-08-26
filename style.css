@@ -20,8 +20,8 @@
   --mono: ui-monospace, "Cascadia Mono", "SF Mono", "JetBrains Mono", Consolas,
           "Liberation Mono", monospace;
 
-  /* The two curves the whole page runs on. */
-  --snap:  cubic-bezier(.22, 1.42, .36, 1);   /* overshoots. that's the point. */
+  
+  --snap:  cubic-bezier(.22, 1.42, .36, 1);  
   --glide: cubic-bezier(.32, .72, .16, 1);
 }
 
@@ -47,11 +47,10 @@ body {
 .stage { width: min(560px, 100%); position: relative; }
 
 
-/* ---------- the card ---------- */
 
 .portal {
   position: relative;
-  overflow: hidden;                 /* keeps the runaway button on the reservation */
+  overflow: hidden;
   padding: clamp(28px, 6vw, 44px);
   border-radius: 28px;
   background: var(--paper);
@@ -64,7 +63,7 @@ body {
   transition: opacity .42s var(--glide), transform .42s var(--glide);
 }
 
-.portal::before {                   /* the house colour, worn like a ribbon */
+.portal::before {                  
   content: "";
   position: absolute;
   inset: 0 0 auto;
@@ -79,7 +78,6 @@ body {
 }
 
 
-/* ---------- crest ---------- */
 
 .crest { display: flex; align-items: center; gap: 12px; }
 
